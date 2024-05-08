@@ -9,8 +9,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import NotFound from './components/NotFound';
+import Login from './components/Login';
 
 const router = createBrowserRouter([
+  {
+    path: '/login',
+    element: <Login />,
+    errorElement: <NotFound />,
+  },
   {
     path: '/',
     element: <App />,

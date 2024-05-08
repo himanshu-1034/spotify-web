@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, ReactElement } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from './store/store';
 
-function App() {
+function App(): ReactElement {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex flex-col' style={{height: '98vh', width: '98vw', overflow: 'hidden'}}>
+      <div className='flex-1 h-full overflow-x-hidden overflow-y-auto'>
+        
+      </div>
+      <div style={{width: '100%'}} className='p-4'>
+        
+      </div>
     </div>
   );
 }

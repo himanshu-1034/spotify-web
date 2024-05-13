@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import NotFound from './components/NotFound';
 import Login from './components/Login';
+import Home from './components/Home';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,12 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <NotFound />,
-    children: []
+    children: [
+      {
+        path: '/home',
+        element: <Home />
+      }
+    ]
   }
 ]);
 

@@ -12,7 +12,7 @@ body {
 
 div#root {
   height: 98vh;
-  width: 98vw;
+  width: 100%;
 }
 
 .card-general {
@@ -30,9 +30,14 @@ div#root {
   justify-content: center;
 }
 
+.base-bg {
+  background: linear-gradient(45deg, #000000, #1CB16A, #000000);
+  background-size: 300% 300%;
+  animation: bg-animate 20s ease-in-out infinite;
+}
+
 .login-wrapper .login-logo {
-  height: 300px;
-  width: 50%;
+  height: 20vh;
 }
 
 .login-wrapper .tag-line {
@@ -44,16 +49,56 @@ div#root {
 
 .login-wrapper .login-button {
   border-radius: 100px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #000000;
   transition: .3s;
   padding: 15px 70px;
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   font-weight: 500;
   font-size: 18;
 }
 
 .login-wrapper .login-button:hover:not(:disabled) {
-  color: #FFFFFF;
-  background-color: #000000;
+  color: #1CB16A;
+  /* background-color: #000000; */
+}
+
+@keyframes bg-animate {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+#player {
+  height: 70px;
+  border-top: gray 1px solid;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#home {
+  display: flex;
+  height: 100%;
+}
+
+#main-component {
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+  background: linear-gradient(180deg, blue, #000000, #000000, #000000, #000000);
+}
+
+#sidebar {
+  max-width: 40%;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar .sidebar-logo {
+  margin: 10px;
+  height: 60px;
+  width: 200px;
 }

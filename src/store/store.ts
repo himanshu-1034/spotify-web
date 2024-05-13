@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
+import accessToken from '../reducers/accessToken';
 
 export const store = configureStore({
   reducer: {
-    
+    accessToken
   },
 })
 

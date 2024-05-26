@@ -4,9 +4,9 @@
 
 body {
   background-color: #000000;
-  color: #FFFFFF;
+  color: gray;
   box-sizing: border-box;
-  padding: 10px!important;
+  padding: 10px !important;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -64,9 +64,17 @@ div#root {
 }
 
 @keyframes bg-animate {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #player {
@@ -86,7 +94,6 @@ div#root {
   flex: 1;
   height: 100%;
   padding: 15px;
-  background: linear-gradient(180deg, blue, #000000, #000000, #000000, #000000);
 }
 
 #sidebar {
@@ -101,4 +108,54 @@ div#root {
   margin: 10px;
   height: 60px;
   width: 200px;
+}
+
+#main-component .main-component-bg {
+  background: linear-gradient(to bottom, blue, #121212 25%);
+  overflow: hidden auto;
+}
+
+.basic-list-item {
+  padding: 5px;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.5s;
+  user-select: none;
+}
+
+.basic-list-item:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.main-page-list-item {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  font-weight: 600;
+  transition: 0.1s;
+}
+
+.main-page-list-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+
+}
+
+.playlist-showcase-widget .showcase-list-item {
+  cursor: pointer;
+  width: 20%;
+  max-width: 200px;
+  transition: 0.2s;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 4px;
+}
+
+.playlist-showcase-widget .showcase-list-item:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
